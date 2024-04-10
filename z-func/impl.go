@@ -20,6 +20,7 @@ func zFunc(s string) []int {
         // match ends after 'r' (right bound)
 		if zf[i]-1+i > r {
 			r = zf[i] - 1 + i
+            l = i
 		}
 	}
 
