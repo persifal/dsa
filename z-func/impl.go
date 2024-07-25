@@ -1,7 +1,5 @@
 package main
 
-import du "dsa/utils"
-
 func zFunc(s string) []int {
 	n := len(s)
 	zf := make([]int, n)
@@ -10,7 +8,7 @@ func zFunc(s string) []int {
 	for i := 1; i < n; i++ {
 		//
 		if i <= r {
-			zf[i] = du.Min(r-i+1, zf[i-l])
+			zf[i] = min(r-i+1, zf[i-l])
 		}
 
 		for zf[i]+i < n && s[zf[i]] == s[zf[i]+i] {

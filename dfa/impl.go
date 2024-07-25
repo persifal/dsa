@@ -1,9 +1,5 @@
 package main
 
-import (
-	du "dsa/utils"
-)
-
 func Dfa(haystack, needle string) int {
 	n, m := len(haystack), len(needle)
 	transitions := transitions(needle)
@@ -28,7 +24,7 @@ func transitions(pattern string) [][]int {
 
 	for q := 0; q <= m; q++ {
 		for c := 0; c < 256; c++ {
-			k := du.Min(m, q+1)
+			k := min(m, q+1)
 			for k > 0 && !isSuffix(pattern[:k], pattern[:q]+string(rune(c))) {
 				k--
 			}
