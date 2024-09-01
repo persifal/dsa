@@ -5,6 +5,7 @@ import (
 )
 
 func TestIter(t *testing.T) {
+	// given
 	a := 28851538
 	b := 1183019
 	expect := 17657
@@ -19,6 +20,7 @@ func TestIter(t *testing.T) {
 }
 
 func TestRec(t *testing.T) {
+	// given
 	a := 28851538
 	b := 1183019
 	expect := 17657
