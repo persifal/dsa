@@ -1,9 +1,5 @@
 package quickselect
 
-import (
-	"math/rand"
-)
-
 func quickSelect(arr []int, index int) int {
 	n := len(arr)
 	return doSelect(arr, 0, n-1, index)
@@ -35,9 +31,9 @@ func partition(arr []int, left, right int) int {
 	return pivotLocation
 }
 
-func randomizedPivot(arr []int, left, right int) int {
-	rnd := rand.Intn(right-left) + left
-	arr[right], arr[rnd] = arr[rnd], arr[right]
+// func randomizedPivot(arr []int, left, right int) int {
+// 	rnd := rand.Intn(right-left) + left
+// 	arr[right], arr[rnd] = arr[rnd], arr[right]
 
-	return arr[right]
-}
+// 	return arr[right]
+// }
